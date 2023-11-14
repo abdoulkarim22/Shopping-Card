@@ -86,3 +86,11 @@
     box-shadow: none;
     border-color: violet;
   }
+  .nameCupcake{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 30px;
+  }
+  .prixCupcake{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 32px;
+  }
