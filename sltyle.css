@@ -1,0 +1,88 @@
+.liens{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 22px;
+}
+.images{
+    width: 100%;
+    height: 870px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(Images/Bacground.5.jpeg);
+    background-attachment: fixed;
+  }
+.imgLogo{
+    width: 100px;
+}
+#navbarText{
+    margin-left: 700px;
+}
+@media (max-width:1440px) {
+    #navbarText{
+        margin-left: 400px;
+    }
+  }
+@media (max-width:1024px) {
+    #navbarText{
+        margin-left: 100px;
+    }
+  }
+  @media (max-width:768px) {
+    .btnExplore{
+        position: relative;
+        bottom: 40em;
+        left: 0.1rex;
+      }    
+  }
+  /* @media (max-width:375px) {
+    .btnExplore{
+        position: relative;
+        left: 0.3em;
+      }
+  } */
+
+  .btn1{
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+.Titre{
+    font-family: 'Edu TAS Beginner', cursive;
+    position: relative;
+    top: 10rem;
+  }
+  #texte{
+    font-size: 60px;
+    color: darkorchid;
+  }
+  .texte1{
+    font-size: 50px;
+    color: yellow;
+  }
+  /* .btnExplore{
+    
+    bottom: 40em;
+    right: 30em;
+  } */
+  .btnExplorer{
+    width: 130px;
+    border: 2px solid black;
+    border-radius: 9px;
+    background-color: transparent;
+  }
+  .btnExplore{
+    position: relative;
+    top: 13rem;
+    right: 29rem;
+  }
+  .imageCesar{
+   height: 100% !important;
+  }
+  .store{
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 100px;
+    text-align: center;
+    color: violet;
+  }
+  .form-control:focus{
+    box-shadow: none;
+    border-color: violet;
+  }
