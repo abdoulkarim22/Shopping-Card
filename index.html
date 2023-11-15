@@ -65,7 +65,7 @@
           <div>
             <span class="me-4 liens"><i class="bi bi-telephone-fill"></i> +227 80 07 70 79</span>
             <span>
-              <button class="p-1 me-2 btn1">
+              <button id="btnBoutique" class="p-1 me-2 btn1">
                 <span class="liens"><i class="bi bi-cart-fill"></i>0 Items - $0.00</span>
               </button>
              </span>
@@ -75,6 +75,80 @@
   </header>
     <main>
         <section class="py-5 text-center sector1">  
+          <div class="d-flex justify-content-end divShop">
+            <div id="divFill" class="divBoutique table-responsive d-none">
+            <table class="tableBoutique">
+              <tbody>
+                <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr> <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  rtryfe
+                </td>
+              </tr>
+
+              </tbody>
+           </table>
+           <p class="mt-3 leTotal">Total: <span>$</span></p>
+           <button type="button" class="btn btn-outline-primary mb-3 leTotal">Clear Cart</button>
+           <button type="button" class="btn btn-outline-warning mb-3 leTotal">Checkout</button>
+
+           <button type="button" class="btn btn-outline-dark leTotal mb-3" id="btnExit">Exit</button>
+          </div>
+          </div>
           <div class="images">
             <span class="Titre"><span class="texte1">Welcome To</span><span id="texte"> QUANDHY AND  CAKE</span></span>
             <span class="btnExplore"><a href="#sectorOne"><button class="btnExplorer p-2">EXPLORE</button></a></span> 
@@ -101,6 +175,13 @@
           <div class="container">
             <!-- ******************************************** Sector 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
               <h1 class="store mt-5">Our Store</h1>
+             <div class="divDesbtn mb-3">
+                <button type="button" class="btn btn-outline-dark">ALL</button>
+                <button type="button" class="btn btn-outline-success">Cake</button>
+                <button type="button" class="btn btn-outline-primary">Cupcake</button>
+                <button type="button" class="btn btn-outline-secondary">Sweet</button>
+                <button type="button" class="btn btn-outline-danger">Dougnut</button>
+             </div>
               <div class="d-flex justify-content-center ms-5">
                 <div class="input-group mb-3 w-50">
                   <button class="btn btn-outline-danger" type="button" id="button-addon1"><i class="bi bi-search"></i></button>
@@ -113,14 +194,14 @@
               <div class="col">
                 <div class="card shadow-sm h-100">
                   <!-- =====================  img sector 1 ========================== -->
-                  <img class="h-75 cardimg"  src="Images/capkupes.new3.avif" alt=""> 
+                   <img id="Cupcake" class="h-75 cardimg"  src="Images/capkupes.new3.avif" alt=""> 
                   <!-- =====================  img sector 1  ========================== -->
                   <div class="card-body bg-dark-subtle">
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                        <p class="nameCupcake">Cupcake Items</p>
                       </div>
-                      <small style="font-size: 22px;color: green;">$5</small>
+                      <small id="small" style="font-size: 22px;color: green;"><p>$5</p><div class="divFill p-2"><i class="bi bi-cart-fill"></i></div></small>
                     </div>
                   </div>
                 </div>
@@ -314,5 +395,6 @@
           </div>
           </div>
       </main>
+      <script src="app.js"></script>
 </body>
 </html>
