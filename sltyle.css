@@ -1,3 +1,7 @@
+body{
+  padding: 0;
+  margin: 0;
+}
 .liens{
     font-family: 'Edu TAS Beginner', cursive;
     font-size: 22px;
@@ -35,6 +39,19 @@
       height: 400px;
       width: 300px;
     }
+    .div-Star{
+      position: absolute;
+      top: 6px;
+     }
+     .div-Star-collones-two{
+      position: absolute;
+      top: 2px;
+     }
+     .div-Star-collones-tree{
+      position: absolute;
+      top: 6px;
+     }
+    
   }
   @media (max-width:768px) {
     .btnExplore{
@@ -158,41 +175,20 @@
   .d-none{
     display: none;
   }
-  /* .divShop{
-    ::-webkit-scrollbar{
-      width: 10px;
-  }
-  ::-webkit-scrollbar-thumb{
-      background: rgb(131,58,180);
-      background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-      border-radius: 10px;
-  }
-  ::-webkit-scrollbar-track{
-      background-color: #d1e5ff;
-  }
-  } */
- 
-   /* .btnAll{
-    background-color: transparent;
-    background-color: blue;
-    width: 105px;
-    height: 70px;
-    /* border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%; */
-    /* border-radius: 100%; */
-/* .btnSweet{
-  height: 90px;
-  width: 105px;
-}
-.btnCake{
-  height: 90px;
-  width: 105px;
-}
-.btnSweet{
-  height: 90px;
-  width: 105px;
-}
-.btnCupcake{
-  height: 90px;
-  width: 105px;
-} */
+ .div-Star{
+  position: absolute;
+  bottom: 390px;
+ }
+ .bi-star{
+  color: mediumblue;
+ }
+ .div-Star-collones-two{
+  position: absolute;
+  bottom: 422px;
+ }
+ .div-Star-collones-tree{
+  position: absolute;
+  bottom: 350px;
+ }
+
+  

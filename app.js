@@ -21,4 +21,4 @@ btnBoutique.addEventListener('click',function () {
 });
 btnExit.addEventListener('click',function () {
     divFill.classList.add("d-none");
-});
+});  
