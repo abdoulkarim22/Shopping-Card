@@ -190,5 +190,9 @@ body{
   position: absolute;
   bottom: 350px;
  }
+ .imageAjout{
+  width: 70px;
+  border-radius: 30px;
+ }
 
   
