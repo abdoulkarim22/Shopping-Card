@@ -26,6 +26,7 @@ Clear.addEventListener('click',function () {
 })
 
  ajouterAupanier.addEventListener('click',function (event) {
+    alert("Ajout fait avec succes");
     event.preventDefault();
         tableChopingcard.push(datas);
         localStorage.setItem("tableChopingcard",JSON.stringify(tableChopingcard));
@@ -40,11 +41,10 @@ function ajoutElements(event) {
     iTems.innerText = index+1;
     tbody.innerHTML += `
     <tr>
-       <td class="text-center w-25"><img  class= "imageAjout" src="${element.image}" alt=""></td>
-       <td>${element.namePrix}</td>
+       <td class="text-center w-25"><img  class= "imageAjout" src="${element.image1}" alt=""></td>
+       <td>${element.namePrix1}</td>
        <td><i class="bi bi-trash"></i></td>
-   </tr>
-   `
+   </tr>`
    });
 
 }

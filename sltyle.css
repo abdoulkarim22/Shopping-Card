@@ -194,5 +194,11 @@ body{
   width: 70px;
   border-radius: 30px;
  }
+ /* .alert-danger{
+  width: 20%;
+  z-index: 1;
+  position: absolute;
+  left: 100px;
+ } */
 
   
