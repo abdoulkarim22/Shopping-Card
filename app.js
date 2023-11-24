@@ -6,6 +6,17 @@ const tbody = document.getElementById("tbody");
 const ajouterAupanier = document.getElementById("ajouter");
 const Clear = document.getElementById("Clear");
 const iTems = document.getElementById("iTems");
+const etoile = document.getElementById("etoile");
+const totalAchat = document.getElementById("totalAchat");
+const afficheTotal = document.getElementById("afficheTotal");
+let total = 0;
+
+
+
+// etoile.addEventListener('click',function () {
+//     etoile.classList.add("color");
+    
+// })
 
 
 let tableChopingcard = [];
@@ -37,15 +48,26 @@ Clear.addEventListener('click',function () {
 
 function ajoutElements(event) {
    tbody.innerHTML = "";
+   let total = 0;
    tableChopingcard.forEach((element,index) => {
+    total += parseInt(element.prix1);
+    console.log(total);
     iTems.innerText = index+1;
     tbody.innerHTML += `
     <tr>
        <td class="text-center w-25"><img  class= "imageAjout" src="${element.image1}" alt=""></td>
        <td>${element.namePrix1}</td>
-       <td><i class="bi bi-trash"></i></td>
+       <td><i onclick="trash(${index})" class="bi bi-trash"></i></td>
    </tr>`
    });
+   afficheTotal.innerText = total
+   totalAchat.innerText = total
 
 }
 ajoutElements();
+
+function trash(index) {
+    tableChopingcard.splice(index);
+    localStorage.setItem("tableChopingcard",JSON.stringify(tableChopingcard));
+    ajoutElements();
+  }

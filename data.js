@@ -1,5 +1,6 @@
 const datas = {
   namePrix1:"Cupcake Items <br> $5",
+  prix1:"5",
   image1:"http://127.0.0.1:5503/Images/capkupes.new3.avif",
 
   namePrix2:"Sweet Items <br> $5",
