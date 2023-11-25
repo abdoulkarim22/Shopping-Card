@@ -9,6 +9,9 @@ const iTems = document.getElementById("iTems");
 const etoile = document.getElementById("etoile");
 const totalAchat = document.getElementById("totalAchat");
 const afficheTotal = document.getElementById("afficheTotal");
+const filtre = document.querySelectorAll(".Sweet-Items");
+console.log(filtre);
+console.log(ajouterAupanier);
 let total = 0;
 
 
@@ -47,6 +50,7 @@ Clear.addEventListener('click',function () {
 
 
 function ajoutElements(event) {
+    event?.preventDefault();
    tbody.innerHTML = "";
    let total = 0;
    tableChopingcard.forEach((element,index) => {

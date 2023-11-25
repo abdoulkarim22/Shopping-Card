@@ -1,7 +1,4 @@
-body{
-  padding: 0;
-  margin: 0;
-}
+ 
 .liens{
     font-family: 'Edu TAS Beginner', cursive;
     font-size: 22px;
@@ -58,7 +55,7 @@ body{
         position: relative;
         bottom: 40em;
         left: 0.1rex;
-      }    
+      }
   }
   @media (max-width:425px) {
     .divDesbtn{
@@ -138,15 +135,15 @@ body{
     height: 100%;
   }
   .divFill{
-    font-size: 25px;
+    font-size: 35px;
     color: hotpink;
-    background-color: aqua;
     padding: 2%;
     border-top-left-radius: 33px;
     border-bottom-right-radius: 3px;
     position: relative;
-    top: 15px;
-    left: 16px;
+    left: 17px;
+    bottom: 100px;
+    z-index: 1;
   }
   .divBoutique{
     position: absolute;
