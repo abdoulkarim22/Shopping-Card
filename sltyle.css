@@ -21,10 +21,20 @@
 #navbarText{
     margin-left: 700px;
 }
+@media (max-width:2560px) {
+  .div-Star{
+    position: absolute;
+    top: 6px;
+   }
+}
 @media (max-width:1440px) {
     #navbarText{
         margin-left: 400px;
     }
+    .div-Star{
+      position: absolute;
+      top: 6px;
+     }
   }
 @media (max-width:1024px) {
     #navbarText{
@@ -174,11 +184,9 @@
   }
  .div-Star{
   position: absolute;
-  bottom: 390px;
+  bottom: 350px;
  }
- .bi-star{
-  color: mediumblue;
- }
+
  .div-Star-collones-two{
   position: absolute;
   bottom: 422px;

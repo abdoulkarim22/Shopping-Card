@@ -1,39 +1,97 @@
-const datas = {
-  namePrix1:"Cupcake Items <br> $5",
-  prix1:"5",
-  image1:"http://127.0.0.1:5503/Images/capkupes.new3.avif",
+const datas = [
+  {
+    name:"Cupcake Items",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images/capkupes.new3.avif",
+    categorie: "Cupcake"
+  },
+  {
+    name:"Sweet Items",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images/New.sweets.webp",
+    categorie:"Sweet"
+  },
+  {
+    name:"Cake Items",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images/5.jpg",
+    categorie:"Cake"
+  },
 
-  namePrix2:"Sweet Items <br> $5",
-  image2:"http://127.0.0.1:5503/Images/New.sweets.webp",
+  {
+    name:"Cake Items",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images/1.jpg",
+    categorie:"Cake"
+  },
+  {
+    name: "Cupcake Items",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images//cupkapes.New2.webp",
+    categorie:"Cupcake"
+  },
+  {
+    name:"Cupcake Items",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images/Cupkapes.New.webp",
+    categorie:"Cupcake"
+  },
+  {
+    name:"Sweet Items",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images/Sweets.1.avif",
+    categorie:"Sweet"
+  },
+  {
+    name:"Cake Items",
+    prix:"10",
+    image:"http://127.0.0.1:5503/Images/sweets.2.webp",
+    categorie:"Cake"
+  },
+  {
+    name:"Dougnut Item",
+    prix:"15",
+    image:"http://127.0.0.1:5503/Images/Doun.new3.jpeg",
+    categorie:"Dougnut"
+  },
+  {
+    name: "Dougnut Item",
+    prix:"5",
+    image:"http://127.0.0.1:5503/Images/Doun.new.webp",
+    categorie:"Dougnut"
+  },
+  {
+    name:"Dougnut Item",
+    prix:"10",
+    image:"http://127.0.0.1:5503/Images/Doun.new2.webp",
+    categorie:"Dougnut"
+  },
+  {
+    name:"Sweet Items",
+    prix:"15",
+    image:"http://127.0.0.1:5503/Images/Sweets.3.webp",
+    categorie:"Sweet"
+  },
+]
 
-  namePrix3:"Cake Items <br> $5",
-  image3:"http://127.0.0.1:5503/Images/5.jpg",
+  
+  
+  
 
-  namePrix4:"Cake Items <br> $5",
-  image4:"http://127.0.0.1:5503/Images/1.jpg",
+  
 
-  namePrix5: "Cupcake Items <br> $5",
-  image5:"http://127.0.0.1:5503/Images//cupkapes.New2.webp",
 
-  namePrix6:"Cupcake Items <br> $5",
-  image6:"http://127.0.0.1:5503/Images/Cupkapes.New.webp",
 
-  namePrix7:"Sweet Items <br> $5",
-  image7:"http://127.0.0.1:5503/Images/Sweets.1.avif",
+ 
 
-  namePrix8:"Cake Items <br> $10",
-  image8:"http://127.0.0.1:5503/Images/sweets.2.webp",
+ 
 
-  namePrix9:"Dougnut Item <br> $15",
-  image9:"http://127.0.0.1:5503/Images/Doun.new3.jpeg",
+ 
 
-  namePrix10: "Dougnut Item <br> $5",
-  image10:"http://127.0.0.1:5503/Images/Doun.new.webp",
 
-  namePrix11:"Dougnut Item <br> $10",
-  image11:"http://127.0.0.1:5503/Images/Doun.new2.webp",
 
-  namePrix12:"Sweet Items <br> $15",
-  image12:"http://127.0.0.1:5503/Images/Sweets.3.webp",
-}
+
+
+
+
 
