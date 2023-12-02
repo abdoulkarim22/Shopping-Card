@@ -14,6 +14,7 @@
 </head>
 <body>
   <header>
+    <div id="divAnnonce" class="alert alert-secondary hidden"><span><i class="bi bi-info-circle fs-2 text-danger"></i></span> Ajout fait avec succes</div>
     <nav class="navbar navbar-expand-lg justify-content-between d-flex">
         <div>
           <img src="Images/Logo.png" class="imgLogo" alt="Logo">
@@ -39,7 +40,7 @@
             <span class="me-4 liens"><i class="bi bi-telephone-fill"></i> +227 80 07 70 79</span>
             <span>
               <button id="btnBoutique" class="p-1 me-2 btn1">
-                <span class="liens"><i class="bi bi-cart-fill"></i><span id="iTems">0</span> Items - $ <span id="afficheTotal"></span></span>
+                <span class="liens"><i class="bi bi-cart-fill"></i><span id="iTems">0</span> Items - $ <span id="afficheTotal">0</span></span>
               </button>
              </span>
           </div> 
@@ -64,7 +65,7 @@
           </div>
           <div class="images">
             <span class="Titre"><span class="texte1">Welcome To</span><span id="texte"> QUANDHY AND  CAKE</span></span>
-            <span class="btnExplore"><a href="#sectorOne"><button class="btnExplorer p-2">EXPLORE</button></a></span> 
+            <span class="btnExplore"><a href="#theCard"><button class="btnExplorer p-2">EXPLORE</button></a></span> 
           </div>
         </section>
         <div class="container">
@@ -75,7 +76,7 @@
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio necessitatibus architecto doloribus amet, voluptatibus similique placeat quo error, cum, accusantium unde! Ad, modi. Ex adipisci harum laudantium, suscipit quisquam earum.
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio necessitatibus architecto doloribus amet, voluptatibus similique placeat quo error, cum, accusantium unde! Ad, modi. Ex adipisci harum laudantium, suscipit quisquam earum.
                   </p>
-                  <a href="#sectorOne"><button class="btnExplorer p-2">EXPLORE</button></a>
+                  <a href="#theCard"><button class="btnExplorer p-2">EXPLORE</button></a>
             </div>
             <div class="col-lg-6">
               <div class=" py-4"> 
@@ -104,9 +105,11 @@
 
             
 
+           <section id="theCard">
             <div id="divAffiche" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
             </div>
+           </section>
           </div>
           </div>
       </main>

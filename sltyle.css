@@ -1,4 +1,24 @@
- 
+ .alert-secondary{
+  left: 20px;
+  top: 100px;
+  position: fixed;
+  width: 300px;
+  height: 90px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ .hidden{
+  display: none;
+ }
+ .block{
+  display: block;
+ }
+ .bi-info-circle{
+  margin-right: 20px;
+ }
 .liens{
     font-family: 'Edu TAS Beginner', cursive;
     font-size: 22px;
@@ -201,6 +221,13 @@
  }
  .color{
   color: red;
+ }
+ .click{
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  border: 2px solid red;
+  z-index: 1;
  }
  /* .alert-danger{
   width: 20%;

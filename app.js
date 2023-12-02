@@ -16,6 +16,7 @@ const Cupcake = document.getElementById("Cupcake");
 const Sweet = document.getElementById("Sweet");
 const Dougnut = document.getElementById("Dougnut");
 const all = document.getElementById("all");
+const divAnnonce = document.getElementById("divAnnonce")
 let total = 0;
 
 // ===================== search ==========================
@@ -73,6 +74,7 @@ Cupcake.addEventListener('click',function (event) {
    affiche(arrayFilter);
 });
 Sweet.addEventListener('click',function (event) {
+
   event.preventDefault(); 
   let arrayFilter = datas;
    arrayFilter = datas.filter((element) => element.categorie === "Sweet");
@@ -95,10 +97,10 @@ all.addEventListener('click',function (event) {
 function affiche(array) {
   divAffiche.innerHTML= ""
  array.forEach((element,index) => {
-  divAffiche.innerHTML += `<div class="col">
+  divAffiche.innerHTML += `<div id="the-Card" class="col">
   <div class="card shadow-sm h-100 produits">
     <!-- =====================  img sector 1 ========================== -->
-     <img id="Cupcake" class="h-75 cardimg"  src="${element.image}" alt=""> 
+     <img id="Cupcake" class="h-75 cardimg"  src="${element.image}" alt="">  
     <!-- =====================  img sector 1  ========================== -->
     <div class="card-body bg-dark-subtle">
      <div class="div-Star"><i class="bi bi-star-fill fs-4 " id="etoile"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i></div>
@@ -115,15 +117,11 @@ function affiche(array) {
 }
 affiche(datas);
 
-// const ajouterAupanier = document.querySelectorAll("#ajouter");
+//  const eventClick = document.getElementById("eventClick");
 
-//   ajouterAupanier.addEventListener('click',function (event) {
-//      alert("Ajout fait avec succes");
-//      event.preventDefault();
-//          tableChopingcard.push(datas);
-//          localStorage.setItem("tableChopingcard",JSON.stringify(tableChopingcard));
-//          ajoutElements();
-//   });
+//  eventClick.addEventListener('click',function () {
+//       alert("Ajout fait avec succes");
+//    });
 
 let tableChopingCard = [];
 if (!JSON.parse(localStorage.getItem("tableChopingCard"))) {
@@ -131,18 +129,21 @@ if (!JSON.parse(localStorage.getItem("tableChopingCard"))) {
 }
 tableExpenses = JSON.parse(localStorage.getItem("tableExpenses"));
 
-
 function ajoutElements(index) {
-  alert("Ajout fait avec succes");
+  divAnnonce.classList.add("block")
+  setTimeout(() =>{
+    divAnnonce.classList.remove("block")
+  },3000);
    tableChopingCard.push(datas[index]);
    localStorage.setItem("tableChopingCard",JSON.stringify(tableChopingCard));
    displayselements(); 
 }
   function displayselements(index) {
     // index?.preventDefault();
-   console.log("No");
    tbody.innerHTML = "";
+    total = 0
   tableChopingCard.forEach((element,index) => {
+    total += parseInt(element.prixe);
     iTems.innerText = index+1; 
     tbody.innerHTML += `
     <tr>
@@ -152,9 +153,15 @@ function ajoutElements(index) {
        <td><i onclick="trash(${index})" class="bi bi-trash fs-3"></i></td>
    </tr>`
   });
-
+    totalAchat.innerText= total
+    afficheTotal.innerText = total
+    localStorage.setItem("tableChopingCard",JSON.stringify(tableChopingCard))
  }
   displayselements(); 
+
+
+
+ 
 
 
 function trash(index) {
@@ -162,4 +169,6 @@ function trash(index) {
   // localStorage.setItem("tableChopingcard",JSON.stringify(datas[index]));
   displayselements();
 }
+
+
 
