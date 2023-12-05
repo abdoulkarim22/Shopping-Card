@@ -16,7 +16,9 @@ const Cupcake = document.getElementById("Cupcake");
 const Sweet = document.getElementById("Sweet");
 const Dougnut = document.getElementById("Dougnut");
 const all = document.getElementById("all");
-const divAnnonce = document.getElementById("divAnnonce")
+const divAnnonce = document.getElementById("divAnnonce");
+const img = document.getElementsByTagName("img");
+const text = document.getElementById("text")
 let total = 0;
 
 // ===================== search ==========================
@@ -94,13 +96,14 @@ all.addEventListener('click',function (event) {
 });
 /* ===================== event Filter ========================================= */
 
+
 function affiche(array) {
   divAffiche.innerHTML= ""
  array.forEach((element,index) => {
   divAffiche.innerHTML += `<div id="the-Card" class="col">
   <div class="card shadow-sm h-100 produits">
-    <!-- =====================  img sector 1 ========================== -->
-     <img id="Cupcake" class="h-75 cardimg"  src="${element.image}" alt="">  
+    <!--onclick="viewImage()" =====================  img sector 1 ========================== -->
+     <img   id="Cupcake" class="h-75 cardimg image_Card"  src="${element.image}" alt="">  
     <!-- =====================  img sector 1  ========================== -->
     <div class="card-body bg-dark-subtle">
      <div class="div-Star"><i class="bi bi-star-fill fs-4 " id="etoile"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i></div>
@@ -116,23 +119,79 @@ function affiche(array) {
  });
 }
 affiche(datas);
+// const next = document.getElementById("next");
 
-//  const eventClick = document.getElementById("eventClick");
+//  next.addEventListener('click',function () {
+//   text.innerHTML = ""
+//     for (let  i= 0; i < datas.length; i++) {
+//       const element = datas[i];
+//       text.innerHTML = `<img src="${element.image}" alt="">`
+      
+//     }
 
-//  eventClick.addEventListener('click',function () {
-//       alert("Ajout fait avec succes");
-//    });
+//  });
+// ========================== function  image ==========================
+  const image_Card = document.querySelectorAll(".image_Card");
+  const idimg = document.getElementById("image-no-source");
+  const div_container = document.getElementById("div_container");
+  const div_img = document.getElementById("div_img");
+
+  function afficheImg(index) {
+    const getsrc = image_Card[index].getAttribute("src");
+    idimg.setAttribute("src", getsrc);
+
+}
+let indexActulle =  0;
+image_Card.forEach((element,index) => {
+  element.addEventListener('click',function () {
+   indexActulle = index;
+   afficheImg(indexActulle);
+   div_container.style.display= "flex";
+   document.body.style.overflow = "hidden";
+  });
+});
+idimg.addEventListener('click',function () {
+  div_container.style.display = "none";
+  document.body.style.overflow = "auto";
+});
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+prev.addEventListener('click',function () {
+  if (indexActulle > 0) {
+    indexActulle--;
+   
+    afficheImg(indexActulle);
+  }
+});
+next.addEventListener('click',function () {
+  if (indexActulle < image_Card.length -1) {
+    indexActulle++;
+    console.log(indexActulle);
+    afficheImg(indexActulle);
+  }else{
+    indexActulle = 0;
+  }
+});
+// ========================== function  image ==========================
+
+
+
+
+
+
 
 let tableChopingCard = [];
 if (!JSON.parse(localStorage.getItem("tableChopingCard"))) {
   tableChopingCard = localStorage.setItem("tableChopingCard",JSON.stringify(tableChopingCard));
 }
-tableExpenses = JSON.parse(localStorage.getItem("tableExpenses"));
+ 
+tableChopingCard = JSON.parse(localStorage.getItem("tableChopingCard"));
 
 function ajoutElements(index) {
-  divAnnonce.classList.add("block")
+  divAnnonce.classList.add("block");
   setTimeout(() =>{
-    divAnnonce.classList.remove("block")
+    divAnnonce.classList.remove("block");
   },3000);
    tableChopingCard.push(datas[index]);
    localStorage.setItem("tableChopingCard",JSON.stringify(tableChopingCard));
