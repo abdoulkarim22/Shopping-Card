@@ -4,7 +4,7 @@ const datas = [
     prixe:"5",
     prix:"$5",
     image:"http://127.0.0.1:5503/Images/capkupes.new3.avif",
-    categorie: "Cupcake"
+    categorie: "Cupcake",
   },
   {
     name:"Sweet Items",
@@ -18,7 +18,7 @@ const datas = [
     prixe:"5",
     prix:"$5",
     image:"http://127.0.0.1:5503/Images/5.jpg",
-    categorie:"Cake"
+    categorie:"Cake",
   },
 
   {

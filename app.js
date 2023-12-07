@@ -104,9 +104,9 @@ function affiche(array) {
   <div class="card shadow-sm h-100 produits">
     <!--onclick="viewImage()" =====================  img sector 1 ========================== -->
      <img   id="Cupcake" class="h-75 cardimg image_Card"  src="${element.image}" alt="">  
-    <!-- =====================  img sector 1  ========================== -->
+    <!-- <i class="bi bi-star-fill fs-4 " id="etoile"></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i> =====================  img sector 1  ========================== -->
     <div class="card-body bg-dark-subtle">
-     <div class="div-Star"><i class="bi bi-star-fill fs-4 " id="etoile"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i><i class="bi bi-star-fill fs-4"></i></div>
+     <div class="div-Star theStar" id="divStar"></div>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
          <h2 class="nameCupcake">${element.name}</h2>
@@ -119,8 +119,16 @@ function affiche(array) {
  });
 }
 affiche(datas);
-// const next = document.getElementById("next");
 
+
+const theStar = document.querySelectorAll(".theStar");
+for (let i = 0; i < theStar.length; i++) {
+  theStar[i].innerHTML = `<i class="bi bi-star-fill fs-4 " id="etoile"></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i>`
+}
+
+
+   
+// const next = document.getElementById("next");
 //  next.addEventListener('click',function () {
 //   text.innerHTML = ""
 //     for (let  i= 0; i < datas.length; i++) {
@@ -204,13 +212,15 @@ function ajoutElements(index) {
   tableChopingCard.forEach((element,index) => {
     total += parseInt(element.prixe);
     iTems.innerText = index+1; 
-    tbody.innerHTML += `
+    tbody.innerHTML += 
+    `
     <tr>
        <td class="text-center w-25"><img  class= "imageAjout" src="${tableChopingCard[index].image}" alt=""></td>
        <td>${tableChopingCard[index].name}</td>
        <td class="text-center p-3">${tableChopingCard[index].prix}</td>
        <td><i onclick="trash(${index})" class="bi bi-trash fs-3"></i></td>
-   </tr>`
+   </tr>
+   `
   });
     totalAchat.innerText= total
     afficheTotal.innerText = total
@@ -228,6 +238,3 @@ function trash(index) {
   // localStorage.setItem("tableChopingcard",JSON.stringify(datas[index]));
   displayselements();
 }
-
-
-
