@@ -97,6 +97,10 @@ all.addEventListener('click',function (event) {
 /* ===================== event Filter ========================================= */
 
 
+
+
+
+
 function affiche(array) {
   divAffiche.innerHTML= ""
  array.forEach((element,index) => {
@@ -104,7 +108,7 @@ function affiche(array) {
   <div class="card shadow-sm h-100 produits">
     <!--onclick="viewImage()" =====================  img sector 1 ========================== -->
      <img   id="Cupcake" class="h-75 cardimg image_Card"  src="${element.image}" alt="">  
-    <!-- <i class="bi bi-star-fill fs-4 " id="etoile"></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i> =====================  img sector 1  ========================== -->
+    <!-- <i class="bi bi-star-fill fs-4 " id="etoile_1"></i><i class="bi bi-star-fill fs-4 id="etoile_2""></i><i class="bi bi-star-fill fs-4 id="etoile_3""></i><i class="bi bi-star-fill fs-4 id="etoile_4""></i><i class="bi bi-star-fill fs-4 id="etoile_5""></i> =====================  img sector 1  ========================== -->
     <div class="card-body bg-dark-subtle">
      <div class="div-Star theStar" id="divStar"></div>
       <div class="d-flex justify-content-between align-items-center">
@@ -123,8 +127,12 @@ affiche(datas);
 
 const theStar = document.querySelectorAll(".theStar");
 for (let i = 0; i < theStar.length; i++) {
-  theStar[i].innerHTML = `<i class="bi bi-star-fill fs-4 " id="etoile"></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i><i class="bi bi-star-fill fs-4 id="etoile""></i>`
+  theStar[i].innerHTML = `<i class="bi bi-star-fill fs-4 " id="etoile_1"></i><i class="bi bi-star-fill fs-4" id="etoile_2"></i><i class="bi bi-star-fill fs-4 id="etoile_3""></i><i class="bi bi-star-fill fs-4 id="etoile_4""></i><i class="bi bi-star-fill fs-4 id="etoile_5""></i>`
 }
+// ========================= etoile ========================================
+
+// ========================= etoile ========================================
+
 
 
    

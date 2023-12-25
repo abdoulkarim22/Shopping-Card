@@ -280,6 +280,9 @@
   border: 2px solid red;
   z-index: 1;
  }
+ .colorStar{
+  color: #ee82ee;
+ }
  /* .alert-danger{
   width: 20%;
   z-index: 1;
