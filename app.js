@@ -91,7 +91,7 @@ Dougnut.addEventListener('click',function (event) {
 all.addEventListener('click',function (event) {
   event.preventDefault(); 
   let arrayFilter = datas;
-   arrayFilter = datas.filter((element) => datas);
+   arrayFilter = datas.filter(() =>datas);
    affiche(arrayFilter);
 });
 /* ===================== event Filter ========================================= */
